@@ -7,34 +7,28 @@ import { ChevronDown } from "lucide-react"
 const faqData = [
   {
     question: "What is BetterCF and who is it for?",
-    answer:
-      "Pointer is an AI-powered development platform designed for developers, teams, and organizations who want toaccelerate their coding workflow. It's perfect for both individual developers looking to enhance their productivity and teams seeking seamless collaboration tools.",
+    answer: "BetterCF is a browser extension designed for competitive programmers using Codeforces. It provides a modern UI, dark mode, problem analytics, and other enhancements to improve your coding workflow."
   },
   {
-    question: "How does Pointer's AI code review work?",
-    answer:
-      "Our AI analyzes your code in real-time, providing intelligent suggestions for improvements, catching potential bugs, and ensuring best practices. It learns from your coding patterns and adapts to your team's standards, making code reviews faster and more consistent.",
+    question: "How do I install BetterCF?",
+    answer: "Simply visit the Chrome Web Store or Firefox Add-ons page, search for 'BetterCF', and click 'Add to browser'. Once installed, the extension works automatically on Codeforces."
   },
   {
-    question: "Can I integrate BetterCF with my existing tools?",
-    answer:
-      "Yes! BetterCF offers one-click integrations with popular development tools including GitHub, GitLab, VS Code, Slack, and many more. Our MCP connectivity allows you to easily manage and configure server access across your entire development stack.",
+    question: "Is BetterCF free to use?",
+    answer: "Yes! BetterCF is completely free and open-source. We believe in making the competitive programming experience better for everyone."
   },
   {
-    question: "What's included in the free plan?",
-    answer:
-      "The free plan includes real-time code suggestions, basic integrations, single MCP server connection, up to 2 AI coding agents, and Vercel deployments with BetterCF branding. It's perfect for individual developers getting started.",
+    question: "Does BetterCF support dark mode on all Codeforces pages?",
+    answer: "Yes, BetterCF provides a carefully crafted dark mode that works seamlessly across all Codeforces pages, including problems, contests, blogs, and profiles."
   },
   {
-    question: "How do parallel coding agents work?",
-    answer:
-      "Our parallel coding agents can work on different parts of your codebase simultaneously, solving complex problems faster than traditional single-threaded approaches. You can launch multiple agents to handle different tasks like bug fixes, feature development, and code optimization concurrently.",
+    question: "Can I customize the features?",
+    answer: "Absolutely. BetterCF comes with a settings dashboard where you can toggle specific features, customize themes, and tweak the layout to your preference."
   },
   {
-    question: "Is my code secure with Pointer?",
-    answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, secure data transmission, and compliance with industry standards. Your code never leaves your secure environment without your explicit permission, and we offer on-premises deployment options for enterprise customers.",
-  },
+    question: "Is BetterCF safe?",
+    answer: "Yes. BetterCF is open-source, and all the code is publicly available. It only runs on Codeforces and does not collect or transmit any of your personal data."
+  }
 ]
 
 interface FAQItemProps {
@@ -99,7 +93,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-[18.20px] break-words">
-            Everything you need to know about BetterCF and how it can transform your development workflow
+            Everything you need to know about BetterCF and how it can transform your Codeforces workflow.
           </p>
         </div>
       </div>
