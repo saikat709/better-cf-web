@@ -3,63 +3,69 @@ import Image from "next/image"
 const testimonials = [
   {
     quote:
-      "The real-time code suggestions from BetterCf feel like having a senior engineer reviewing every line of code as you write. The accuracy of its recommendations has improved our overall code quality, reduced review time.",
+      "The dark mode and improved UI provided by BetterCF makes night-time coding sessions on Codeforces an absolute joy. It has reduced my eye strain significantly.",
     name: "Annette Black",
-    company: "Sony",
+    company: "Student",
     avatar: "/images/avatars/annette-black.png",
     type: "large-teal",
   },
   {
     quote:
-      "Integrating BetterCF into our stack was smooth, and the MCP server connections saved us days of configuration work",
+      "Installing BetterCF was a breeze, and the problem tags toggle has saved me from accidental spoilers.",
     name: "Dianne Russell",
-    company: "McDonald's",
+    company: "Competitive Programmer",
     avatar: "/images/avatars/dianne-russell.png",
     type: "small-dark",
   },
   {
     quote:
-      "BetterCF’s multi-agent coding feature has been a game changer. We’re fixing complex bugs in hours instead of spending entire sprints on them.",
+      "BetterCF's contest reminder feature has been a game-changer. I never miss a Div 2 round anymore!",
     name: "Cameron Williamson",
-    company: "IBM",
+    company: "Grandmaster",
     avatar: "/images/avatars/cameron-williamson.png",
     type: "small-dark",
   },
   {
     quote:
-      "We no longer juggle multiple tools. BetterCF brought all our integrations together in one place, which simplified our entire workflow.",
+      "I used to hate the default Codeforces UI, but with BetterCF, everything just looks so modern and clean. It’s hard to go back.",
     name: "Robert Fox",
-    company: "MasterCard",
+    company: "Candidate Master",
     avatar: "/images/avatars/robert-fox.png",
     type: "small-dark",
   },
   {
     quote:
-      "We started with the free plan just to test it out, but within a week we upgraded to Pro. Now, we can’t imagine coding without it",
+      "I tried BetterCF just to see the dark mode, and now I can't imagine participating in a contest without it.",
     name: "Darlene Robertson",
-    company: "Ferrari",
+    company: "Expert",
     avatar: "/images/avatars/darlene-robertson.png",
     type: "small-dark",
   },
   {
     quote:
-      "Collaborative coding feels effortless now. With Pointer’s real-time previews, pair programming has become faster and more productive.",
+      "The analytics and performance charts on profile pages are fantastic. The insights truly help me understand my progression.",
     name: "Cody Fisher",
-    company: "Apple",
+    company: "Specialist",
     avatar: "/images/avatars/cody-fisher.png",
     type: "small-dark",
   },
   {
     quote:
-      "Deploying on Vercel with BetterCF was not just simple, it felt seamless. We went from coding to seeing our changes live in minutes without worrying about build pipelines or configuration issues.",
+      "Customizing the colors and themes on Codeforces makes the platform feel personal to me. Highly recommended for every competitive programmer out there.",
     name: "Albert Flores",
-    company: "Louis Vuitton",
+    company: "Master",
     avatar: "/images/avatars/albert-flores.png",
     type: "large-light",
   },
 ]
 
-const TestimonialCard = ({ quote, name, company, avatar, type }) => {
+const TestimonialCard = ({ quote, name, company, avatar, type }: {
+  quote: string;
+  name: string;
+  company: string;
+  avatar: string;
+  type: string;
+}) => {
   const isLargeCard = type.startsWith("large")
   const avatarSize = isLargeCard ? 48 : 36
   const avatarBorderRadius = isLargeCard ? "rounded-[41px]" : "rounded-[30.75px]"
@@ -133,11 +139,11 @@ export function TestimonialGridSection() {
       <div className="self-stretch py-6 md:py-8 lg:py-14 flex flex-col justify-center items-center gap-2">
         <div className="flex flex-col justify-start items-center gap-4">
           <h2 className="text-center text-foreground text-3xl md:text-4xl lg:text-[40px] font-semibold leading-tight md:leading-tight lg:leading-[40px]">
-            Coding made effortless
+            A game changer for competitive programming
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm md:text-sm lg:text-base font-medium leading-[18.20px] md:leading-relaxed lg:leading-relaxed">
-            {"Hear how developers ship products faster, collaborate seamlessly,"} <br />{" "}
-            {"and build with confidence using Pointer's powerful AI tools"}
+            Hear how competitive programmers solve problems faster {" "} <br />{" "}
+            and improve their ratings using BetterCF.
           </p>
         </div>
       </div>
