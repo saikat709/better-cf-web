@@ -1,18 +1,12 @@
 import type React from "react"
 
 interface DeploymentEasyProps {
-  /** Width of component – number (px) or any CSS size value */
   width?: number | string
-  /** Height of component – number (px) or any CSS size value */
   height?: number | string
-  /** Extra Tailwind / CSS classes for root element */
   className?: string
 }
 
 const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height = "100%", className = "" }) => {
-  /* ------------------------------------------------------------
-   * Theme-based design tokens using global CSS variables
-   * ---------------------------------------------------------- */
   const themeVars = {
     "--deploy-primary-color": "hsl(var(--primary))",
     "--deploy-background-color": "hsl(var(--background))",
@@ -21,9 +15,6 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
     "--deploy-border-color": "hsl(var(--border))",
   } as React.CSSProperties
 
-  /* ------------------------------------------------------------
-   * Console log output (static for demo) – can be replaced via props
-   * ---------------------------------------------------------- */
   const logLines = [
     "[16:37:25.637] Running build in Washington, D.C., USA (East) – iad1",
     "[16:37:25.638] Build machine configuration: 2 cores, 8 GB",
@@ -60,9 +51,6 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
       role="img"
       aria-label="Deployment console output with Deploy on Vercel button"
     >
-      {/* -------------------------------------------------------- */}
-      {/* Console / Terminal panel                                */}
-      {/* -------------------------------------------------------- */}
       <div
         style={{
           position: "absolute",
@@ -119,38 +107,6 @@ const DeploymentEasy: React.FC<DeploymentEasyProps> = ({ width = "100%", height 
           }}
         />
       </div>
-
-      {/* -------------------------------------------------------- */}
-      {/* Call-to-action button                                   */}
-      {/* -------------------------------------------------------- */}
-      <button
-        style={{
-          position: "absolute",
-          top: "calc(50% + 57.6px)",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "6.375px",
-          padding: "5.1px 10.2px",
-          background: "var(--deploy-primary-color)",
-          color: "hsl(var(--primary-foreground))",
-          border: "none",
-          cursor: "pointer",
-          borderRadius: "8.925px",
-          fontFamily: "'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          fontSize: "16.575px",
-          lineHeight: "25.5px",
-          letterSpacing: "-0.51px",
-          fontWeight: 500,
-          whiteSpace: "nowrap",
-          boxShadow:
-            "0px 42.075px 11.475px rgba(0, 0, 0, 0), 0px 26.775px 10.2px rgba(0, 0, 0, 0.01), 0px 15.3px 8.925px rgba(0, 0, 0, 0.05), 0px 6.375px 6.375px rgba(0, 0, 0, 0.09), 0px 1.275px 3.825px rgba(0, 0, 0, 0.1)",
-        }}
-      >
-        🚀 Deploy on Vercel
-      </button>
     </div>
   )
 }
