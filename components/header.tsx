@@ -5,6 +5,7 @@ import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link" // Import Link for client-side navigation
 
 export function Header() {
@@ -27,6 +28,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
+            <Image
+              src="/logos/trump.png"
+              alt="BetterCF logo"
+              width={36}
+              height={36}
+              className="rounded-full"
+              priority
+            />
             <span className="text-foreground text-xl font-semibold">BetterCF</span>
           </div>
           <nav className="hidden md:flex items-center gap-2">
